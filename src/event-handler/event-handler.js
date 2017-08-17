@@ -14,6 +14,7 @@ function init() {
             });
 
             conn.on('close', function () {
+                console.log(`close client`);
             });
 
             conn.on('message', function (message) {
@@ -40,7 +41,7 @@ function sendRaw(obj) {
  * @param {Number} groupId QQ群号
  * @param {String} msg 需要发送的消息
  */
-function sendGroupMsg(groupId, msg) {
+function sendGroupMsg(groupId = throwIfMissing('groupId'), msg = throwIfMissing('msg')) {
     sendRaw({
         act    : 101,
         groupid: groupId,

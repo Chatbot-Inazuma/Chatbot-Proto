@@ -1,3 +1,4 @@
+require('./init');
 const EVENT_HANDLER = require('./event-handler/event-handler');
 
 setTimeout(() => {
