@@ -1,0 +1,22 @@
+{
+  "name"        : "chatbot-proto",
+  "version"     : "0.0.0",
+  "description" : "",
+  "main"        : "index.js",
+  "scripts"     : {
+    "start": "cd src && node run.js"
+  },
+  "repository"  : {
+    "type": "git",
+    "url" : "git+https://github.com/Chatbot-Inazuma/Chatbot-Proto.git"
+  },
+  "author"      : "",
+  "license"     : "ISC",
+  "bugs"        : {
+    "url": "https://github.com/Chatbot-Inazuma/Chatbot-Proto/issues"
+  },
+  "homepage"    : "https://github.com/Chatbot-Inazuma/Chatbot-Proto#readme",
+  "dependencies": {
+    "websocket": "^1.0.24"
+  }
+}

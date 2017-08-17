@@ -1,0 +1,9 @@
+# config files
+config.cson
+config.json
+
+# WebStorm config file
+.idea
+
+# nodejs packages
+node_modules
