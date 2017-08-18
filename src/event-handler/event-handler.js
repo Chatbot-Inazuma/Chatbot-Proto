@@ -1,5 +1,7 @@
 const config          = require('../config');
 const WebSocketClient = require('websocket').client;
+const EVENT_PIPE      = require('../util/event-pipe');
+
 
 function init() {
     return new Promise((resolve, reject) => {
@@ -20,6 +22,7 @@ function init() {
             conn.on('message', function (message) {
                 if (message.type === 'utf8') {
                     console.log(message);
+                    EVENT_PIPE.send(message);
                 }
             });
 
@@ -50,5 +53,6 @@ function sendGroupMsg(groupId = throwIfMissing('groupId'), msg = throwIfMissing(
 }
 
 module.exports = {
-    sendGroupMsg
+    sendGroupMsg,
+    init
 };

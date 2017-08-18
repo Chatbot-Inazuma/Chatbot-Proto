@@ -1,4 +1,4 @@
 {
-  "name": "init",
+  "name": "event-pipe",
   "main": "./index.js"
 }
