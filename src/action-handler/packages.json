@@ -1,0 +1,4 @@
+{
+  "name": "action-handler",
+  "main": "./index.js"
+}

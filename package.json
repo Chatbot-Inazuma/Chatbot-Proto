@@ -17,6 +17,7 @@
   },
   "homepage"    : "https://github.com/Chatbot-Inazuma/Chatbot-Proto#readme",
   "dependencies": {
+    "lodash"   : "^4.17.4",
     "websocket": "^1.0.24"
   }
 }

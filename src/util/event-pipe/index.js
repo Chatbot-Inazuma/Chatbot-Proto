@@ -2,23 +2,30 @@ const EventEmitter = require("events");
 
 class EventPipe extends EventEmitter {
 
-    constructor() {
+    constructor(tag) {
         super();
+        this.tag = tag;
     }
 
     send(msg) {
-        super.emit('newMsg', msg);
+        super.emit(this.tag, msg);
     }
 
-    add(fn) {
-        super.on('newMsg', fn);
+    obtain(fn) {
+        super.on(this.tag, fn);
     }
 
 }
 
-let pipe = new EventPipe();
+function create(tag) {
 
-module.exports = {
-    send: pipe.send,
-    add : pipe.add
-};
+    let temp = new EventPipe(tag);
+
+    return {
+        send  : temp.send,
+        obtain: temp.obtain
+    }
+    
+}
+
+module.exports = create;

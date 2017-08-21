@@ -1,0 +1,4 @@
+{
+  "name": "chatbot",
+  "main": "./chatbot.js"
+}
